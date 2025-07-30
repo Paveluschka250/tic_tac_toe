@@ -186,7 +186,30 @@ function showOverlay(message) {
     const overlay = document.getElementById('overlay');
     const overlayMsg = document.getElementById('overlay-message');
     if (overlay && overlayMsg) {
-        overlayMsg.innerText = message;
+        // Entferne alte Siegklassen
+        overlayMsg.classList.remove('win-circle', 'win-cross', 'draw');
+        // Prüfe auf Sieg-Text und ersetze durch animiertes Symbol
+        if (message && message.includes('hat gewonnen')) {
+            let winnerSymbol = '';
+            let winnerClass = '';
+            let overlayClass = '';
+            if (message.startsWith('Kreis')) {
+                winnerSymbol = '◯';
+                winnerClass = 'circle';
+                overlayClass = 'win-circle';
+            } else if (message.startsWith('Kreuz')) {
+                winnerSymbol = '✕';
+                winnerClass = 'cross';
+                overlayClass = 'win-cross';
+            }
+            overlayMsg.innerHTML = `<span class="indicator ${winnerClass}" style="font-size:2.5rem;vertical-align:middle;">${winnerSymbol}</span> <span style="font-size:1.3rem;vertical-align:middle;">hat gewonnen!</span>`;
+            overlayMsg.classList.add(overlayClass);
+        } else if (message && message.toLowerCase().includes('unentschieden')) {
+            overlayMsg.innerText = message;
+            overlayMsg.classList.add('draw');
+        } else {
+            overlayMsg.innerText = message;
+        }
         overlay.classList.add('active');
     }
 }

@@ -1,3 +1,31 @@
+/* Overlay-Message Siegesfarben */
+.overlay-message {
+    background: rgba(30,30,30,0.92);
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #000;
+    border-radius: 16px;
+    padding: 24px 36px;
+    min-width: 220px;
+    display: inline-block;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    transition: background 0.3s, color 0.3s;
+}
+.overlay-message.win-circle {
+    background: linear-gradient(120deg, #1a3a4b 0%, #4be1ff 100%);
+    color: #fff;
+}
+.overlay-message.win-cross {
+    background: linear-gradient(120deg, #4b1a1a 0%, #ff4b4b 100%);
+    color: #fff;
+}
+.overlay-message.draw {
+    background: linear-gradient(120deg, #232526 0%, #1c1c1c 100%);
+    color: #fff;
+}
 /* Gewinnlinie */
 .win-line {
     pointer-events: none;
