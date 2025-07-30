@@ -31,6 +31,7 @@ function drawWinLine(indices, callback) {
     line.id = 'win-line';
     line.className = 'win-line';
     // Länge und Winkel berechnen
+    
     const dx = end.x - start.x;
     const dy = end.y - start.y;
     const length = Math.sqrt(dx * dx + dy * dy);
@@ -42,8 +43,9 @@ function drawWinLine(indices, callback) {
     line.style.left = `${start.x}px`;
     line.style.top = `${start.y - 2.5}px`;
     line.style.transform = `rotate(${angle}deg)`;
+    line.style.transformOrigin = `top left`;
     line.style.borderRadius = '4px';
-    line.style.zIndex = '1100';
+    line.style.zIndex = '900';
     line.style.transition = 'width 0.5s cubic-bezier(.68,-0.55,.27,1.55)';
     container.appendChild(line);
 
