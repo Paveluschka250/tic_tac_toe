@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "schrift";
+  src: url("../assets/fonts/schrift.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "schrift", Arial, Helvetica, sans-serif;
+}
