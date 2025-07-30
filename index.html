@@ -8,13 +8,21 @@
     <link rel="icon" href="./assets/icons/favicon.svg" />
     <title>Titel</title>
   </head>
-  <body>
+  <body onload="init()">
     <header></header>
     <main>
-      <h1>Test</h1>
+      <div class="player-indicator">
+        <span id="circle-indicator" class="indicator circle">◯</span>
+        <span id="cross-indicator" class="indicator cross">✕</span>
+      </div>
+      <div id="container"></div>
     </main>
+    <div id="overlay" class="overlay">
+      <div class="overlay-message" id="overlay-message"></div>
+      <button id="restart-btn">Neu starten</button>
+    </div>
     <footer></footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/templates.js"></script>
   </body>
-  <script src="./js/script.js"></script>
-  <script src="./js/templates.js"></script>
 </html>
