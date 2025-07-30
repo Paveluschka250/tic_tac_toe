@@ -1,3 +1,75 @@
+/* Info-Box für Impressum/Datenschutz */
+.info-box {
+    background: rgba(30,30,30,0.92);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    padding: 32px 32px 24px 32px;
+    max-width: 480px;
+    margin: 32px auto 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+.info-box h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    color: #4be1ff;
+    text-shadow: 0 0 8px #222;
+}
+.info-box a {
+    color: #4be1ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.info-box a:hover {
+    color: #ff4b4b;
+    text-decoration: underline;
+}
+/* Spielerischer Titel */
+.game-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 32px 0 12px 0;
+    letter-spacing: 2px;
+    gap: 12px;
+    text-shadow: 0 0 12px #222, 0 0 8px #4be1ff, 0 0 8px #ff4b4b;
+}
+
+/* Footer immer unten */
+.footer {
+    width: 100vw;
+    background: rgba(30,30,30,0.95);
+    color: #bbb;
+    font-size: 1rem;
+    text-align: center;
+    padding: 18px 0 12px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1200;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.25);
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.footer a {
+    color: #4be1ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer a:hover {
+    color: #ff4b4b;
+    text-decoration: underline;
+}
 /* Overlay-Message Siegesfarben */
 .overlay-message {
     background: rgba(30,30,30,0.92);

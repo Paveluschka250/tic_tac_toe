@@ -9,7 +9,13 @@
     <title>Titel</title>
   </head>
   <body onload="init()">
-    <header></header>
+    <header>
+      <h1 class="game-title">
+        <span class="circle">◯</span>
+        <span style="margin: 0 12px; font-size: 2.2rem; color: #fff; letter-spacing: 2px; text-shadow: 0 0 8px #4be1ff, 0 0 8px #ff4b4b;">Tic Tac Toe</span>
+        <span class="cross">✕</span>
+      </h1>
+    </header>
     <main>
       <div class="player-indicator">
         <span id="circle-indicator" class="indicator circle">◯</span>
@@ -21,7 +27,13 @@
       <div class="overlay-message" id="overlay-message"></div>
       <button id="restart-btn">Neu starten</button>
     </div>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="./pages/privacy-policy.html">Datenschutz</a>
+        <span style="margin: 0 8px; color: #888;">|</span>
+        <a href="./pages/impressum.html">Impressum</a>
+      </div>
+    </footer>
     <script src="./js/script.js"></script>
     <script src="./js/templates.js"></script>
   </body>
